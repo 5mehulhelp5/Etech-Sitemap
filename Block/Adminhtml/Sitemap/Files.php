@@ -23,7 +23,7 @@ class Files extends Template
         private readonly Filesystem $filesystem,
         private readonly Config $config,
         private readonly StoreManagerInterface $storeManager,
-        private readonly FormKey $formKey,
+        private readonly FormKey $formKeyProvider,
         array $data = []
     ) {
         parent::__construct($context, $data);
@@ -36,7 +36,7 @@ class Files extends Template
 
     public function getFormKey(): string
     {
-        return $this->formKey->getFormKey();
+        return $this->formKeyProvider->getFormKey();
     }
 
     public function isEnabled(): bool
