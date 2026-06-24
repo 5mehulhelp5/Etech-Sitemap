@@ -17,5 +17,6 @@
                 <item name="custom" xsi:type="object">Etechflow\Sitemap\Model\Provider\CustomProvider</item>
             </argument>
         </arguments>
+            <plugin name="etechflow_sitemap_license_guard" type="Etechflow\Sitemap\Plugin\GeneratorLicenseGuard" sortOrder="10"/>
     </type>
 </config>
